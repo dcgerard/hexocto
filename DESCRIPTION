@@ -1,0 +1,37 @@
+Package: hexocto
+Title: Wang's Tests for HWE and Random Mating in Autohexaploids and Autooctoploids
+Version: 0.0.1
+Authors@R: 
+    c(person(given = "David",
+             family = "Gerard",
+             role = c("aut", "cre"),
+             email = "gerard.1787@gmail.com",
+             comment = c(ORCID = "0000-0001-9450-5023")),
+      person("Jing", "Wang", role = c("aut")),
+      person(given = "NSF DBI 2132247",
+             role = "fnd",
+             comment = "Supports David Gerard's work"),
+      person(given = "The Forestry and Grassland Science and Technology Innovation Youth Top Talent Project of China (No. 2020132608)",
+             role = "fnd",
+             comment = "Supports Jing Wang's work"),
+      person(given = "The National Natural Science Foundation of China (No. 31870689)",
+             role = "fnd",
+             comment = "Supports Jing Wang's work"),
+      person(given = "The National Key Research and Development Program of China (2018YFD1000401)",
+             role = "fnd",
+             comment = "Supports Jing Wang's work")
+     )
+Description: This code is from Wang et. al. (2021a) <doi:10.1093/hr/uhac104> 
+    and Wang et. al. (2022b) <doi:10.3389/fgene.2021.794907>, in package
+    form so that it is easy to compare against other procedures.
+    I, David Gerard, would recommend you not use this package and use
+    the hwep package instead (https://cran.r-project.org/package=hwep).
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    hwep

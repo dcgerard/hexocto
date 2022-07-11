@@ -1,0 +1,37 @@
+---
+output: github_document
+bibliography: "bib.bib"
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# hexocto
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Takes the code from @wang2021tracing and @wang2022asymptotic and places it in package form so that it is easier to compare. I would not recommend using this package for real work. You should use the [`{hwep}`](https://cran.r-project.org/package=hwep) package from @gerard2021double.
+
+## Installation
+
+You can install `{hexocto}` using the `{devtools}` package
+
+``` r
+# install.packages("devtools")
+devtools::install_github("dcgerard/hexocto")
+```
+
+## Code of Conduct
+
+Please note that the hexocto project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+## References
