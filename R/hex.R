@@ -358,18 +358,18 @@ hex_onegen <- function(yww, alpha) {
 #' ## this should be 5.922
 #' hex_drtest(yww = yww, nind = nind, niter = 8)
 #'
-#' @export
+#' @noRd
 hex_drtest <- function(yww, nind, niter = 8) {
   hout <- hex_em(yww = yww)
   q1 <- hout$q
-
-  sum((yww - q2)^2 / q2)
 }
 
 
 #' Wang's code to estimate double reduction rate
 #'
 #' @param NN A vector of genotype counts.
+#' @param niter The number of iterations in the EM algorithm.
+#' @param tol The stopping criterion for the EM algorithm.
 #'
 #' @author Jing Wang and David Gerard
 #'

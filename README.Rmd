@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 
 Takes the code from @wang2021tracing and @wang2022asymptotic and places it in package form so that it is easier to compare. I would not recommend using this package for real work. You should use the [`{hwep}`](https://cran.r-project.org/package=hwep) package from @gerard2021double.
 
+The original repos with the original code are <https://github.com/CCBBeijing/hexaploid> and <https://github.com/CCBBeijing/OctoploidDeer>.
+
+If those repos are ever deleted or made private, you can see my forks at <https://github.com/dcgerard/hexaploid> and <https://github.com/dcgerard/OctoploidDeer>.
+
 ## Installation
 
 You can install `{hexocto}` using the `{devtools}` package

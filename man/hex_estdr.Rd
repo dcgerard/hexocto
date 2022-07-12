@@ -8,6 +8,10 @@ hex_estdr(NN, niter = 100, tol = 10^-4)
 }
 \arguments{
 \item{NN}{A vector of genotype counts.}
+
+\item{niter}{The number of iterations in the EM algorithm.}
+
+\item{tol}{The stopping criterion for the EM algorithm.}
 }
 \description{
 Wang's code to estimate double reduction rate
