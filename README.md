@@ -55,7 +55,7 @@ in Natural Autopolyploid Populations.” *bioRxiv*.
 Wang, Jing, Li Feng, Shuaicheng Mu, Ang Dong, Jinwen Gan, Zhenying Wen,
 Juan Meng, Mingyu Li, Rongling Wu, and Lidan Sun. 2022. “<span
 class="nocase">Asymptotic tests for Hardy-Weinberg equilibrium in
-hexaploids</span>.” *Horticulture Research* 9 (May).
+hexaploids</span>.” *Horticulture Research* 9.
 <https://doi.org/10.1093/hr/uhac104>.
 
 </div>

@@ -21,6 +21,13 @@ If those repos are ever deleted or made private, you can see my forks at
 \url{https://github.com/dcgerard/hexaploid} and
 \url{https://github.com/dcgerard/OctoploidDeer}.
 }
+\references{
+\itemize{
+\item{D. Gerard. Double reduction estimation and equilibrium tests in natural autopolyploid populations. \emph{bioRxiv}, 2021. \doi{10.1101/2021.09.24.461731}.}
+\item{J. Wang, L. Feng, S. Mu, A. Dong, J. Gan, Z. Wen, J. Meng, M. Li, R. Wu, and L. Sun. Asymptotic tests for Hardy-Weinberg equilibrium in hexaploids. \emph{Horticulture Research}, 9, 05 2022. \doi{10.1093/hr/uhac104}.}
+\item{J. Wang, X. Lv, L. Feng, A. Dong, D. Liang, and R. Wu. A tracing model for the evolutionary equilibrium of octoploids. \emph{Frontiers in Genetics}, 12, 2021. \doi{10.3389/fgene.2021.794907}.}
+}
+}
 \author{
 \strong{Maintainer}: David Gerard \email{gerard.1787@gmail.com} (\href{https://orcid.org/0000-0001-9450-5023}{ORCID})
 
