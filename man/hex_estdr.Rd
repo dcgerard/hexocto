@@ -4,7 +4,7 @@
 \alias{hex_estdr}
 \title{Wang's code to estimate double reduction rate}
 \usage{
-hex_estdr(NN, niter = 100, tol = 10^-4)
+hex_estdr(NN, niter = 100, tol = 10^-4, pstart = rep(1/4, 4))
 }
 \arguments{
 \item{NN}{A vector of genotype counts.}
@@ -12,6 +12,11 @@ hex_estdr(NN, niter = 100, tol = 10^-4)
 \item{niter}{The number of iterations in the EM algorithm.}
 
 \item{tol}{The stopping criterion for the EM algorithm.}
+
+\item{pstart}{Starting values for simulation script. In Wang et al (2022),
+they always used the true values. In Wang et al. (2022) they always
+used c(0.3, 0.2, 0.35, 0.15), the true values, which is an
+unfair evaluation.}
 }
 \description{
 Wang's code to estimate double reduction rate
@@ -27,6 +32,11 @@ NN <- c(stats::rmultinom(n = 1, size = 100, prob = q1))
 hex_estdr(NN = NN)
 p
 
+}
+\references{
+\itemize{
+\item{J. Wang, L. Feng, S. Mu, A. Dong, J. Gan, Z. Wen, J. Meng, M. Li, R. Wu, and L. Sun. Asymptotic tests for Hardy-Weinberg equilibrium in hexaploids. \emph{Horticulture Research}, 9, 05 2022. \doi{10.1093/hr/uhac104}.}
+}
 }
 \author{
 Jing Wang and David Gerard

@@ -370,8 +370,17 @@ hex_drtest <- function(yww, nind, niter = 8) {
 #' @param NN A vector of genotype counts.
 #' @param niter The number of iterations in the EM algorithm.
 #' @param tol The stopping criterion for the EM algorithm.
+#' @param pstart Starting values for simulation script. In Wang et al (2022),
+#'    they always used the true values. In Wang et al. (2022) they always
+#'    used c(0.3, 0.2, 0.35, 0.15), the true values, which is an
+#'    unfair evaluation.
 #'
 #' @author Jing Wang and David Gerard
+#'
+#' @references
+#' \itemize{
+#'   \item{J. Wang, L. Feng, S. Mu, A. Dong, J. Gan, Z. Wen, J. Meng, M. Li, R. Wu, and L. Sun. Asymptotic tests for Hardy-Weinberg equilibrium in hexaploids. \emph{Horticulture Research}, 9, 05 2022. \doi{10.1093/hr/uhac104}.}
+#' }
 #'
 #' @examples
 #' ## Generate data under assumed mode
@@ -385,15 +394,14 @@ hex_drtest <- function(yww, nind, niter = 8) {
 #' p
 #'
 #' @export
-hex_estdr <- function(NN, niter = 100, tol = 10^-4) {
+hex_estdr <- function(NN, niter = 100, tol = 10^-4, pstart = rep(1/4, 4)) {
   n7 <- NN[1]; n6 <- NN[2]; n5 <- NN[3]; n4 <- NN[4]
   n3 <- NN[5]; n2 <- NN[6]; n1 <- NN[7]
   N=n7+n6+n5+n4+n3+n2+n1
-  ## Initial values, for some reason
-  p3 <- 0.3
-  p2 <- 0.2
-  p1 <- 0.35
-  p0 <- 0.15
+  p3 <- pstart[[1]]
+  p2 <- pstart[[2]]
+  p1 <- pstart[[3]]
+  p0 <- pstart[[4]]
   alpha <- 0
   m <- p3^2
   n <- 2*p3*p2
