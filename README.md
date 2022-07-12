@@ -4,6 +4,8 @@
 # hexocto
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/dcgerard/hexocto/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dcgerard/hexocto/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Takes the code from Wang et al. (2021) and Wang et al. (2022) and places
@@ -11,6 +13,14 @@ it in package form so that it is easier to compare. I would not
 recommend using this package for real work. You should use the
 [`{hwep}`](https://cran.r-project.org/package=hwep) package from Gerard
 (2021).
+
+The original repos with the original code are
+<https://github.com/CCBBeijing/hexaploid> and
+<https://github.com/CCBBeijing/OctoploidDeer>.
+
+If those repos are ever deleted or made private, you can see my forks at
+<https://github.com/dcgerard/hexaploid> and
+<https://github.com/dcgerard/OctoploidDeer>.
 
 ## Installation
 
