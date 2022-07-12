@@ -374,10 +374,18 @@ hex_drtest <- function(yww, nind, niter = 8) {
 #' @author Jing Wang and David Gerard
 #'
 #' @examples
-#' NN <- c(29, 21, 17, 10, 10, 10, 23)
+#' ## Generate data under assumed mode
+#' alpha <- 0.2
+#' p <- c(0.3, 0.2, 0.35, 0.15)
+#' p <- p / sum(p)
+#' q <- stats::convolve(p, rev(p), type = "open")
+#' q1 <- hex_onegen(q, alpha = alpha)
+#' NN <- c(stats::rmultinom(n = 1, size = 100, prob = q1))
+#' hex_estdr(NN = NN)
+#' p
 #'
 #' @export
-hex_estdr <- function(NN, niter = 100) {
+hex_estdr <- function(NN, niter = 100, tol = 10^-4) {
   n7 <- NN[1]; n6 <- NN[2]; n5 <- NN[3]; n4 <- NN[4]
   n3 <- NN[5]; n2 <- NN[6]; n1 <- NN[7]
   N=n7+n6+n5+n4+n3+n2+n1
@@ -397,6 +405,7 @@ hex_estdr <- function(NN, niter = 100) {
 
   f4 <- c();f3 <- c();f2 <- c();f1 <- c();f0 <- c()
   for(i in 1:niter){
+    alpha_old <- alpha
 
     Q7 <-expression(((p3^4+p3^2*p2^2+1/25*(p2^4+4*p3*p2^2*p1+4*p3^2*p1^2)+1/400*(4*p3^2*p0^2+8*p3*p2*p1*p0+4*p2^2*p1^2)+2*p3^3*p2+2/5*(p3^2*p2^2+2*p3^3*p1)
                       +1/10*(2*p3^3*p0+2*p3^2*p2*p1)+1/5*(2*p3*p2^3+4*p3^2*p2*p1)+1/20*(4*p3^2*p2*p0+4*p3*p2^2*p1)+1/50*(2*p3*p2^2*p0
@@ -687,20 +696,25 @@ hex_estdr <- function(NN, niter = 100) {
     fai1.1 <-p1*eval(D(Q1,"p1"))/eval(R1)
     fai1.0 <-p0*eval(D(Q1,"p0"))/eval(R1)
 
-    alpha1 = (fai6A*n7+fai5A1a*n6+fai4A2a*n5+fai3A3a*n4+fai2A4a*n3+fai1A5a*n2+fai6a*n1)/(2*N)
+    alpha = (fai6A*n7+fai5A1a*n6+fai4A2a*n5+fai3A3a*n4+fai2A4a*n3+fai1A5a*n2+fai6a*n1)/(2*N)
     PAAA = (fai7.3*n7+fai6.3*n6+fai5.3*n5+fai4.3*n4+fai3.3*n3+fai2.3*n2+fai1.3*n1)/(4*N)
     PAAa = (fai7.2*n7+fai6.2*n6+fai5.2*n5+fai4.2*n4+fai3.2*n3+fai2.2*n2+fai1.2*n1)/(4*N)
     PAaa = (fai7.1*n7+fai6.1*n6+fai5.1*n5+fai4.1*n4+fai3.1*n3+fai2.1*n2+fai1.1*n1)/(4*N)
     Paaa = (fai7.0*n7+fai6.0*n6+fai5.0*n5+fai4.0*n4+fai3.0*n3+fai2.0*n2+fai1.0*n1)/(4*N)
 
-    f4 <-c(f4,alpha1);f3 <-c(f3,PAAA);f2 <-c(f2,PAAa);f1 <-c(f1,PAaa);f0 <-c(f0,Paaa)
-    p4 <- alpha1 ;p3 <- PAAA ;p2 <-  PAAa;p1 <- PAaa;p0 <- Paaa
+    f4 <-c(f4,alpha);f3 <-c(f3,PAAA);f2 <-c(f2,PAAa);f1 <-c(f1,PAaa);f0 <-c(f0,Paaa)
+    p4 <- alpha ;p3 <- PAAA ;p2 <-  PAAa;p1 <- PAaa;p0 <- Paaa
 
-    cat(alpha1, "\n")
+    # cat(alpha, "\n")
+
+    if (abs(alpha_old - alpha) < tol) {
+      break
+    }
 
   }
 
-  pp4 <- f4[niter];pp3 <- f3[niter];pp2 <- f2[niter];pp1 <- f1[niter];pp0 <- f0[niter]
+  retlist <- list(alpha = p4,
+                  p = c(p3, p2, p1, p0))
 
-
+  return(retlist)
 }

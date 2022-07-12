@@ -4,7 +4,7 @@
 \alias{hex_estdr}
 \title{Wang's code to estimate double reduction rate}
 \usage{
-hex_estdr(NN, niter = 100)
+hex_estdr(NN, niter = 100, tol = 10^-4)
 }
 \arguments{
 \item{NN}{A vector of genotype counts.}
@@ -13,7 +13,15 @@ hex_estdr(NN, niter = 100)
 Wang's code to estimate double reduction rate
 }
 \examples{
-NN <- c(29, 21, 17, 10, 10, 10, 23)
+## Generate data under assumed mode
+alpha <- 0.2
+p <- c(0.3, 0.2, 0.35, 0.15)
+p <- p / sum(p)
+q <- stats::convolve(p, rev(p), type = "open")
+q1 <- hex_onegen(q, alpha = alpha)
+NN <- c(stats::rmultinom(n = 1, size = 100, prob = q1))
+hex_estdr(NN = NN)
+p
 
 }
 \author{
