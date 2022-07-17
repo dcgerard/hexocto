@@ -132,7 +132,7 @@ hex_chisq <- function(yww, nind, niter = 8, alpha = 0, method = c("correct", "in
   chisq <- sum((yww - rvec)^2 / rvec)
   if (method == "correct") {
     chisq <- nind * chisq
-    df <- 4
+    df <- 5
   } else {
     df <- 6
   }
