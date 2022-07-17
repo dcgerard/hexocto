@@ -17,7 +17,7 @@ hex_chisq(yww, nind, niter = 8, alpha = 0, method = c("correct", "incorrect"))
 
 \item{method}{Should we calculate the chi-squared statistic the correct way
 (\code{"correct"}) or the way that Wang et al calculated it
-(\code{"incorrect"})?}
+(\code{"incorrect"})? This also affects the degrees of freedom.}
 }
 \description{
 Chi-squared test for HWE using Wang's approach.

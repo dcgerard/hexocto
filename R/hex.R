@@ -107,7 +107,7 @@ hex_recursive <- function(yww, niter = 8, alpha = 0) {
 #' @param nind The number of individuals in the sample.
 #' @param method Should we calculate the chi-squared statistic the correct way
 #'     (\code{"correct"}) or the way that Wang et al calculated it
-#'     (\code{"incorrect"})?
+#'     (\code{"incorrect"})? This also affects the degrees of freedom.
 #'
 #' @author Jing Wang and David Gerard
 #'
@@ -132,8 +132,10 @@ hex_chisq <- function(yww, nind, niter = 8, alpha = 0, method = c("correct", "in
   chisq <- sum((yww - rvec)^2 / rvec)
   if (method == "correct") {
     chisq <- nind * chisq
+    df <- 4
+  } else {
+    df <- 6
   }
-  df <- 6
   p <- pchisq(q = chisq, df = df, lower.tail = FALSE)
   return(list(chisq = chisq, df = df, p = p))
 }

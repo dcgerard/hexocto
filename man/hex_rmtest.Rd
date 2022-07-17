@@ -15,7 +15,7 @@ hex_rmtest(yww, nind, niter = 30, method = c("correct", "incorrect"))
 
 \item{method}{Should we calculate the chi-squared statistic the correct way
 (\code{"correct"}) or the way that Wang et al calculated it
-(\code{"incorrect"})?}
+(\code{"incorrect"})? This also affects the degrees of freedom.}
 }
 \description{
 Calls \code{\link{hex_em}()} and runs a chi-squared test on the resulting
