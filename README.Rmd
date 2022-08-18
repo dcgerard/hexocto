@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/dcgerard/hexocto/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dcgerard/hexocto/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-Takes the code from @wang2021tracing and @wang2022asymptotic and places it in package form so that it is easier to compare. I would not recommend using this package for real work. You should use the [`{hwep}`](https://cran.r-project.org/package=hwep) package from @gerard2021double.
+Takes the code from @wang2021tracing and @wang2022asymptotic and places it in package form so that it is easier to compare. I would not recommend using this package for real work. You should use the [`{hwep}`](https://cran.r-project.org/package=hwep) package from @gerard2022double.
 
 The original repos with the original code are <https://github.com/CCBBeijing/hexaploid> and <https://github.com/CCBBeijing/OctoploidDeer>.
 

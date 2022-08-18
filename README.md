@@ -13,7 +13,7 @@ Takes the code from Wang et al. (2021) and Wang et al. (2022) and places
 it in package form so that it is easier to compare. I would not
 recommend using this package for real work. You should use the
 [`{hwep}`](https://cran.r-project.org/package=hwep) package from Gerard
-(2021).
+(2022).
 
 The original repos with the original code are
 <https://github.com/CCBBeijing/hexaploid> and
@@ -43,11 +43,11 @@ By contributing to this project, you agree to abide by its terms.
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 
-<div id="ref-gerard2021double" class="csl-entry">
+<div id="ref-gerard2022double" class="csl-entry">
 
-Gerard, David. 2021. “Double Reduction Estimation and Equilibrium Tests
-in Natural Autopolyploid Populations.” *bioRxiv*.
-<https://doi.org/10.1101/2021.09.24.461731>.
+Gerard, David. 2022. “Double Reduction Estimation and Equilibrium Tests
+in Natural Autopolyploid Populations.” *Biometrics*.
+<https://doi.org/10.1111/biom.13722>.
 
 </div>
 
