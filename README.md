@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![NSF-2132247](https://img.shields.io/badge/NSF-2132247-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=2132247)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7019230.svg)](https://doi.org/10.5281/zenodo.7019230)
 [![R-CMD-check](https://github.com/dcgerard/hexocto/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dcgerard/hexocto/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
