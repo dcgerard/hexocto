@@ -24,6 +24,7 @@ Authors@R:
 Description: This code is from Wang et. al. (2021a) <doi:10.1093/hr/uhac104> 
     and Wang et. al. (2022b) <doi:10.3389/fgene.2021.794907>, in package
     form so that it is easy to compare against other procedures.
+    These evaluations are performed in Gerard (2022) <https://hal.archives-ouvertes.fr/hal-03754674>.
     I, David Gerard, would recommend you not use this package and use
     the hwep package instead (https://cran.r-project.org/package=hwep).
 License: GPL (>= 3)

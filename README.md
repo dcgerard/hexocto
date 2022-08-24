@@ -10,10 +10,11 @@
 <!-- badges: end -->
 
 Takes the code from Wang et al. (2021) and Wang et al. (2022) and places
-it in package form so that it is easier to compare. I would not
-recommend using this package for real work. You should use the
+it in package form so that it is easier to compare. These comparisons
+are performed in Gerard (2022a). I would not recommend using this
+package for real work. You should use the
 [`{hwep}`](https://cran.r-project.org/package=hwep) package from Gerard
-(2022).
+(2022b).
 
 The original repos with the original code are
 <https://github.com/CCBBeijing/hexaploid> and
@@ -43,10 +44,18 @@ By contributing to this project, you agree to abide by its terms.
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 
+<div id="ref-gerard2022comment" class="csl-entry">
+
+Gerard, David. 2022a. “Comment on Three Papers about Hardy-Weinberg
+Equilibrium Tests in Autopolyploids.” *HAL*.
+<https://hal.archives-ouvertes.fr/hal-03754674>.
+
+</div>
+
 <div id="ref-gerard2022double" class="csl-entry">
 
-Gerard, David. 2022. “Double Reduction Estimation and Equilibrium Tests
-in Natural Autopolyploid Populations.” *Biometrics*.
+———. 2022b. “Double Reduction Estimation and Equilibrium Tests in
+Natural Autopolyploid Populations.” *Biometrics*.
 <https://doi.org/10.1111/biom.13722>.
 
 </div>
